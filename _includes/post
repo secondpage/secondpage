@@ -1,0 +1,13 @@
+{% if page.audio %}
+	<p class="pull-right">
+		<a href="{{ site.baseurl }}/media/episodes/{{ page.audio }}" class="btn btn-primary"><i class="icon-headphones icon-white"></i> Listen</a>
+	</p>
+{% endif %}
+
+<h2>
+	{{ page.title }}
+</h2>
+
+<p class="muted">{{ page.date | date_to_string }}</p>
+
+{{ content }}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<title>The Second Page</title>
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ site.baseurl }}/static/lib/bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ site.baseurl }}/static/screen.css" />
+		<script src="{{ site.baseurl }}/static/lib/jquery.1.8.3.js"></script>
+		<script src="{{ site.baseurl }}/static/lib/stellar.js"></script>
+		<meta property="og:type" content="website"> 
+		<meta property="og:title" content="The Second Page">
+		<meta property="og:url" content="{{ site.url }}/">
+		<meta property="og:image" content="{{ site.url }}/media/og_resources/02_poster.png">
+		<meta property="og:description" content="The Second Page is a storytelling radio show. It airs on WOBC Oberlin at 11AM on Tuesdays."> 
+	</head>
+	<body>
+		{% comment %}
+			The logic of the background image here is this:
+			1. if page.cover exists, use that image--
+			2. otherwise, get the most recent post and use its cover image.
+		{% endcomment %}
+		{% if page.cover %}
+			{% assign cover = page.cover %}
+			{% assign cover_credit = page.cover_credit %}
+		{% else %}
+			{% assign first = site.posts|first %}
+			{% assign cover = first.cover %}
+			{% assign cover_credit = first.cover_credit %}
+		{% endif %}
+		<header id="hd" class="relativity" style="background-image:url('{{ site.baseurl }}/media/covers/{{ cover }}')" data-stellar-background-ratio="0.25">
+			<div class="container centered">
+				<h1 class="site-title"><a href="{{ site.baseurl }}/">The Second Page</a></h1>
+				<h2 class="site-tagline">Stories. Tuesdays at 11AM.</h2>
+				<div class="header-photo-credit">{{ cover_credit }}</div>
+			</div>
+		</header>
+		<div id="bd">
+			<div class="container">
+				{{ content }}
+			</div>
+		</div>
+		<script type="text/javascript">
+			(function () { $(document.body).stellar(); }());
+		</script>
+		<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-427185-17']);
+		  _gaq.push(['_trackPageview']);
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script>
+	</body>
+</html>
