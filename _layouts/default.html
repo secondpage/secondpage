@@ -3,14 +3,14 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-		<title>The Second Page</title>
+		<title>{% if page.title %}{{ page.title }} &#8212; {% endif %}The Second Page</title>
 		<link rel="stylesheet" type="text/css" media="screen" href="{{ site.baseurl }}/static/lib/bootstrap/css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" media="screen" href="{{ site.baseurl }}/static/screen.css" />
 		<script src="{{ site.baseurl }}/static/lib/jquery.1.8.3.js"></script>
 		<script src="{{ site.baseurl }}/static/lib/stellar.js"></script>
 		<meta property="og:type" content="website"> 
 		<meta property="og:title" content="The Second Page">
-		<meta property="og:url" content="{{ site.url }}/">
+		<meta property="og:url" content="{{ site.url }}{% if page.title %}{{ page.url }}{% else %}/{% endif %}">
 		<meta property="og:image" content="{{ site.url }}/media/og_resources/02_poster.png">
 		<meta property="og:description" content="The Second Page is a storytelling radio show. It airs on WOBC Oberlin at 11AM on Tuesdays."> 
 	</head>
