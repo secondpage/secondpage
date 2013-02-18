@@ -20,7 +20,7 @@ layout: default
 					<a href="{{ site.baseurl }}{{ episode.url }}" class="btn btn-mini"><i class="icon-info-sign"></i> Info</a>
 					<a href="{{ site.baseurl }}{{ episode.url }}#disqus_thread" class="btn btn-mini"><i class="icon-comment"></i> Comments <span class="muted"></span></a>
 					{% if episode.audio %}
-						<a href="{{ site.baseurl }}/media/episodes/{{ episode.audio }}" class="btn btn-mini"><i class="icon-headphones"></i> Listen</a>
+						<a href="{{ site.baseurl }}{{ episode.url }}#AudioPlayer" class="btn btn-mini"><i class="icon-headphones"></i> Listen</a>
 					{% endif %}
 				</p>
 			{% endfor %}
