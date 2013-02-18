@@ -29,6 +29,10 @@ h1, h2, h3, h4, h5, h6, p{
 	margin-bottom: 40px;
 }
 
+.margin-leader{
+	margin-top: 40px;
+}
+
 #hd {
 	padding: 100px 0;
 	background-color: #000;
