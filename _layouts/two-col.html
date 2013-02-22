@@ -19,8 +19,8 @@ layout: default
 				<h4><a href="{{ site.baseurl }}{{ episode.url }}">Episode {{ episode.episode_number }}: {{ episode.title }}</a> <small>{{ episode.date | date_to_string }}</small></h4>
 				<p>
 					{% if episode.audio %}
-						<a href="{{ site.baseurl }}{{ episode.url }}#AudioPlayer" class="btn btn-mini"><i class="icon-headphones"></i> Listen</a>
-						<a href="{{ site.baseurl }}{{ episode.url }}" class="btn btn-mini"><i class="icon-download"></i> Download</a>
+						<a href="{{ site.baseurl }}{{ episode.url }}?autoplay=1" class="btn btn-mini"><i class="icon-headphones"></i> Listen</a>
+						<a href="{{ site.baseurl }}/media/episodes/{{ episode.audio }}" class="btn btn-mini"><i class="icon-download"></i> Download</a>
 					{% endif %}
 					<a href="{{ site.baseurl }}{{ episode.url }}#disqus_thread" class="btn btn-mini"><i class="icon-comment"></i> Comments <span class="muted"></span></a>
 				</p>
