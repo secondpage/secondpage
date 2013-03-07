@@ -13,7 +13,21 @@
 <div id="AudioPlayer">
 	<audio id="EpisodeAudio" src="{{ site.baseurl }}/media/episodes/{{ page.audio }}" width="100%"></audio>
 	<script>
+		// Create the Media Player for the audio
 		$('#EpisodeAudio').mediaelementplayer(/* Options */);
+		// When the audio starts playing, add a > to the titlebar and make links open in new window
+		$('#EpisodeAudio').on('play', function () {
+			document.title = "\u25B6 " + document.title;
+			// make links which do not already have a target have one
+			$('a:not([target])').attr('target', '_blank').addClass('temporarily-external');
+		});
+		// When the audio stops playing, undo the stuff we did when it started
+		$('#EpisodeAudio').on('ended, pause', function () {
+			document.title = document.title.replace("\u25B6 ", "");
+			// remove the target from links that we added it to
+			$('a.temporarily-external').removeAttr('target').removeClass('temporarily-external');
+		});
+		// If the URL contains "?autoplay=1", start playing immediately
 		if (window.location.search == "?autoplay=1") {
 			$('#EpisodeAudio')[0].play(); // God, I hope this works in older browsers too.
 		}
