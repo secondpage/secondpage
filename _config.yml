@@ -1,7 +1,6 @@
 name: "The Second Page"
 description: 'The Second Page is a storytelling radio show hosted by Harris Lapiroff.'
-url: http://makesomethingeveryday.com/secondpage
+url: http://secondpagestories.com/
 safe: true
 paginate: 3
 exclude: Gemfile Gemfile.lock CNAME new log
-baseurl: /secondpage
