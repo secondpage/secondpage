@@ -19,6 +19,8 @@ This week: Stories about background noise.
 
 **Harris Lapiroff** is your host.
 
+**Liz Landsman** graduated from Oberlin College in 2009. She lives and creates illustrations, paintings, and comics in Seattle, Washington. 
+
 **Seán Hanson** is an Oberlin College alum, double-degree class of 2011. He currently lives in Brooklyn, New York.
 
 **Ray Gergen**, Oberlin College class of 2010, is an aspiring storyteller and wandering lost soul. They currently reside in a shared room in a dorm on a Deaf university.
