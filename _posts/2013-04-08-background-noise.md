@@ -4,7 +4,7 @@ episode_number: 10
 title: "Background Noise"
 categories: "episodes"
 cover: "10_background_noise.jpg"
-cover_credit: "Photo by <a href=\"http://www.flickr.com/photos/gerardstolk/5139536465/\">Jacqueline</a>"
+cover_credit: "Photo by <a href=\"http://www.flickr.com/photos/smackbox/74579424/\">Jacqueline</a>"
 audio: "the_second_page_background_noise.mp3"
 image: "10_background_noise.jpg"
 ---
