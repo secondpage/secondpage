@@ -19,7 +19,7 @@ layout: rss-feed
 			<itunes:category text="Personal Journals">
 			</itunes:category>
 		</itunes:category>
-		<itunes:image href="{{ site.media_url }}/og_resources/01_poster.png"/>
+		<itunes:image href="{{ site.media_url }}/og_resources/03_poster.jpg"/>
 		{% for post in site.categories.episodes %}
 			{% if post.audio %}
 				<item>
