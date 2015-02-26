@@ -1,5 +1,5 @@
 name: "The Second Page"
-url: http://makesomethingeveryday.com/secondpage
+url: http://harrislapiroff.github.io/secondpage
 safe: true
 paginate: 3
 exclude: ["Gemfile", "Gemfile.lock", "CNAME"]
