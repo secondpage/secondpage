@@ -19,7 +19,7 @@ layout: rss-feed
 			<itunes:category text="Personal Journals">
 			</itunes:category>
 		</itunes:category>
-		<itunes:image href="{{ site.url }}/media/og_resources/01_poster.png"/>
+		<itunes:image href="{{ site.media_url }}/og_resources/01_poster.png"/>
 		{% for post in site.categories.episodes %}
 			{% if post.audio %}
 				<item>
@@ -27,8 +27,8 @@ layout: rss-feed
 					<description>{{ post.content | xml_escape }}</description>
 					<pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %Z" }}</pubDate>
 					<link>{{ site.url }}{{ post.url }}</link>
-					<enclosure url="{{ site.url }}/media/episodes/{{ post.audio }}" type="audio/mpeg"/>
-					{% if post.image %}<itunes:image href="{{ site.url }}/media/posters/{{ post.image }}" />{% endif %}
+					<enclosure url="{{ site.media_url }}/episodes/{{ post.audio }}" type="audio/mpeg"/>
+					{% if post.image %}<itunes:image href="{{ site.media_url }}/posters/{{ post.image }}" />{% endif %}
 				</item>
 			{% endif %}
 		{% endfor %}
