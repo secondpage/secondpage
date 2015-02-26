@@ -3,5 +3,4 @@ url: http://harrislapiroff.github.io/secondpage
 safe: true
 paginate: 3
 exclude: ["Gemfile", "Gemfile.lock", "CNAME"]
-baseurl: /secondpage
 media_url: https://s3.amazonaws.com/secondpage/media
