@@ -2,29 +2,41 @@
 layout: default
 ---
 
-<div class="row-fluid">
-	<div class="span8">
+<div class="row">
+	<div class="col-sm-8">
 		{{ content }}
 	</div>
-	<div class="span4">
-		<a class="black-link" href="https://itunes.apple.com/us/podcast/the-second-page/id597315172?mt=2"><i class="icon-music"></i> iTunes</a>
-		<a class="black-link" href="http://facebook.com/secondpagestories"><i class="icon-facebook-sign"></i> Facebook</a>
-		<a class="black-link" href="http://twitter.com/thesecondpage"><i class="icon-twitter-sign"></i> Twitter</a>
-		<hr />
-		<div class="margin-trailer">
-			<a href="{{ site.baseurl }}/podcast.xml" class="btn btn-small pull-right"><i class="icon-rss"></i> RSS</a>
-			<h2>All Episodes</h2>
-			{% for episode in site.categories.episodes %}
-				<hr />
-				<h4><a href="{{ site.baseurl }}{{ episode.url }}">Episode {{ episode.episode_number }}: {{ episode.title }}</a> <small>{{ episode.date | date_to_string }}</small></h4>
-				<p>
-					{% if episode.audio %}
-						<a href="{{ site.baseurl }}{{ episode.url }}?autoplay=1" class="btn btn-mini"><i class="icon-headphones"></i> Listen</a>
-						<a href="{{ site.media_url }}/episodes/{{ episode.audio }}" class="btn btn-mini"><i class="icon-download"></i> Download</a>
-					{% endif %}
-					<a href="{{ site.baseurl }}{{ episode.url }}#disqus_thread" class="btn btn-mini"><i class="icon-comment"></i> Comments <span class="muted"></span></a>
-				</p>
-			{% endfor %}
+	<div class="col-sm-4">
+		<div class="btn-group btn-group-justified margin-trailer">
+			<div class="btn-group">
+				<a class="btn btn-sm btn-default" href="https://itunes.apple.com/us/podcast/the-second-page/id597315172?mt=2"><i class="fa fa-fw fa-music"></i> iTunes</a>
+			</div>
+			<div class="btn-group">
+				<a class="btn btn-sm btn-default" href="http://facebook.com/secondpagestories"><i class="fa fa-fw fa-facebook"></i> Facebook</a>
+			</div>
+			<div class="btn-group">
+				<a class="btn btn-sm btn-default" href="http://twitter.com/thesecondpage"><i class="fa fa-fw fa-twitter"></i> Twitter</a>
+			</div>
 		</div>
-	</div>
-</div>
+		<div class="panel panel-default margin-trailer">
+			<div class="panel-heading">
+				<a href="{{ site.baseurl }}/podcast.xml" class="btn btn-default btn-sm pull-right"><i class="fa fa-fw fa-rss"></i> RSS</a>
+				<h2 class="panel-title">All Episodes</h2>
+			</div>
+			<div class="list-group">
+				{% for episode in site.categories.episodes %}
+					<div class="list-group-item">
+						<h4><a href="{{ site.baseurl }}{{ episode.url }}">Episode {{ episode.episode_number }}: {{ episode.title }}</a><br /><small>{{ episode.date | date_to_string }}</small></h4>
+						<p>
+							{% if episode.audio %}
+								<a href="{{ site.baseurl }}{{ episode.url }}?autoplay=1" class="btn btn-default btn-xs"><i class="fa fa-headphones"></i> Listen</a>
+								<a href="{{ site.media_url }}/episodes/{{ episode.audio }}" class="btn btn-default btn-xs"><i class="fa fa-download"></i> Download</a>
+							{% endif %}
+							<a href="{{ site.baseurl }}{{ episode.url }}#disqus_thread" class="btn btn-default btn-xs"><i class="fa fa-comment"></i> Comments <span class="muted"></span></a>
+						</p>
+					</div>
+				{% endfor %}
+			</div><!-- /.panel-body -->
+		</div><!-- /.panel -->
+	</div><!-- /.col-sm-4 -->
+</div><!-- /.row -->
