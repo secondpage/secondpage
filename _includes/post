@@ -1,16 +1,17 @@
-{% if page.audio %}
-	<p class="pull-right">
-		<a href="{{ site.media_url }}/episodes/{{ page.audio }}" class="btn btn-primary"><i class="fa fa-download fa-inverse"></i> Download</a>
-	</p>
-{% endif %}
-
-<h2>
-	{{ page.title }}
-</h2>
+<header class="page-header margin-leader-0">
+	{% if page.audio %}
+		<p class="pull-right">
+			<a href="{{ site.media_url }}/episodes/{{ page.audio }}" class="btn btn-sm btn-primary"><i class="fa fa-download fa-inverse"></i> Download</a>
+		</p>
+	{% endif %}
+	<h2 class="margin-leader-0">
+		{{ page.title }}
+	</h2>
+</header>
 
 <p class="text-muted">{{ page.date | date_to_string }}</p>
 
-<div id="AudioPlayer">
+<div id="AudioPlayer" class="margin-trailer">
 	<audio id="EpisodeAudio" src="{{ site.media_url }}/episodes/{{ page.audio }}" width="100%"></audio>
 	<script>
 		// Create the Media Player for the audio
