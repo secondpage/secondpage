@@ -1,6 +1,6 @@
 {% if page.audio %}
 	<p class="pull-right">
-		<a href="{{ site.media_url }}/episodes/{{ page.audio }}" class="btn btn-primary"><i class="icon-download icon-white"></i> Download</a>
+		<a href="{{ site.media_url }}/episodes/{{ page.audio }}" class="btn btn-primary"><i class="fa fa-download fa-inverse"></i> Download</a>
 	</p>
 {% endif %}
 
@@ -8,7 +8,7 @@
 	{{ page.title }}
 </h2>
 
-<p class="muted">{{ page.date | date_to_string }}</p>
+<p class="text-muted">{{ page.date | date_to_string }}</p>
 
 <div id="AudioPlayer">
 	<audio id="EpisodeAudio" src="{{ site.media_url }}/episodes/{{ page.audio }}" width="100%"></audio>
