@@ -26,6 +26,7 @@ a:hover
 	margin-top: 0
 
 #hd
+	position: relative
 	padding: 100px 0
 	background-color: #000
 	background-repeat: no-repeat
@@ -33,6 +34,17 @@ a:hover
 	color: #FFf
 	text-align: center
 	-webkit-font-smoothing: antialiased
+	&::after
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background-color: rgba(0,0,0,.2)
+	& .container
+		position: relative
+		z-index: 2
 
 #hd ::selection
 	background-color: #000
@@ -45,6 +57,7 @@ a:hover
 	position: absolute
 	bottom: 5px
 	right: 10px
+	z-index: 2
 	font-size: 11px
 	text-transform: uppercase
 	letter-spacing: 1px
