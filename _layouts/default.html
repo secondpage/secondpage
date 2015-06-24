@@ -37,7 +37,11 @@
 		<header id="hd" class="relativity" style="background-image:url('{{ site.media_url }}/covers/{{ cover }}')">
 			<div class="container centered">
 				<h1 class="site-title"><a href="{{ site.baseurl }}/">The Second Page</a></h1>
-				<h2 class="site-tagline">Personal stories. Season two in 2015.</h2>
+				<h2 class="site-tagline">{% if layout == post %}
+					{{ page.title }}
+					{% else %}
+					Personal stories. Season two in 2015.
+					{% endif %}</h2>
 			</div>
 			<div class="header-photo-credit">{{ cover_credit }}</div>
 		</header>
