@@ -1,7 +1,6 @@
 name: "The Second Page"
 url: http://secondpage.org
 safe: true
-paginate: 3
 description: "The Second Page is a storytelling podcast hosted by Harris Lapiroff."
 exclude: ["Gemfile", "Gemfile.lock", "CNAME"]
 media_url: http://s3.amazonaws.com/secondpage/media
