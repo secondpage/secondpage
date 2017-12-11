@@ -1,6 +1,6 @@
 ---
 layout: post
-episode_number: 1
+episode_number: 2
 title: "Gratitude"
 categories: "episodes"
 cover: "s02e02_gratitude.jpg"
