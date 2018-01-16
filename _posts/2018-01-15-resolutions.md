@@ -19,8 +19,9 @@ This week: Stories about resolutions.
 
 **Michael Georgilis** is an alum from Centre College class of 2010, and Northern Kentucky University 2017. A collector of books, tea, and folklore, he works in Cincinnati, Ohio to make textbooks cheaper for students everywhere.
 
-Music by [Podington Bear][podington], [Josh Woodward][woodward], and [Seán Hanson][sean]. Special thanks to Adah Hetko.
+Music by [Podington Bear][podington], [Josh Woodward][woodward], and [Seán Hanson][sean]. Special thanks to [Adah Hetko][adah].
 
 [podington]: http://soundofpicture.com/
 [woodward]: http://www.joshwoodward.com/
 [sean]: http://seanmhanson.com/
+[adah]: https://adahandherbrother.bandcamp.com/
